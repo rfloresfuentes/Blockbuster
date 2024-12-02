@@ -8,14 +8,14 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-100.times do
-    Movie.create!([
-      { name: Faker::Movie.title }
-    ])
-end
-  
 10.times do
     Client.create!([
       { name: Faker::Name.name, age: Faker::Number.between(from: 18, to: 100) }
+    ])
+end
+
+100.times do
+    Movie.create!([
+      { name: Faker::Movie.title }
     ])
 end
